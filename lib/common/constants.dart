@@ -30,4 +30,23 @@ class Constants {
 
   static const String closedCardContent = 'Linux TroubleShoot';
   static const String closedCardContent1 = 'Angular Framework Test';
+
+  static const chat1 = 'Hi Jason! How are you?';
+  static const chat2 = 'I`m good, how about you?';
+  static const chat3 = 'How is the work going?';
+
+  static const completedChat =  'Task`s has been completed and project has been closed.';
+  static const inProgressChat = 'I`ve just started working on the project.';
+  static const inReviewChat = 'I`ve just reviewed the project.';
+
+  static const goodChat = 'Great! Keep it up!';
+  static const thanksChat = 'Thanks for the project';
+  static const welcomeChat = 'Welcome mann!';
+
+  static const typeMessage = 'Type a message';
+
+  static const chatId = 'chat-message';
+
+
+
 }

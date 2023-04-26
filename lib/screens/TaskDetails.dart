@@ -115,7 +115,6 @@ class _TaskDetailsState extends State<TaskDetails> {
                     LayoutBuilder(builder:
                         (BuildContext context, BoxConstraints constraints) {
                       if (constraints.maxWidth < 600) {
-                        // change the value of 600 as per your requirement
                         showDialog(
                           context: context,
                           builder: (BuildContext context) {
@@ -698,7 +697,7 @@ class _TaskDetailsState extends State<TaskDetails> {
 
   Widget _chatMessage() {
     return SizedBox(
-      height: 600,
+      height: 700,
       width: 400,
       child: ListView(
         shrinkWrap: true,

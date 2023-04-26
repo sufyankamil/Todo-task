@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task_screens/common/constants.dart';
 
 import '../common/chat.dart';
 
@@ -50,27 +51,27 @@ class _ChatScreenState extends State<ChatScreen> {
       child: ListView(
         children: [
           const ChatMessage(
-            id: 'chat-message',
+            id:Constants.chatId,
             content: Text(
-              'Hi Jason! How are you?',
+              Constants.chat1,
               style: TextStyle(color: Colors.black),
             ),
             received: true,
             chatBubbleColor: Colors.white,
           ),
           const ChatMessage(
-            id: 'chat-message',
+            id:Constants.chatId,
             content: Text(
-              'I`m good, how about you?',
+              Constants.chat2,
               style: TextStyle(color: Colors.white),
             ),
             received: false,
             chatBubbleColor: Colors.indigo,
           ),
           const ChatMessage(
-            id: 'chat-message',
+            id:Constants.chatId,
             content: Text(
-              'How is the work going?',
+              Constants.chat3,
               style: TextStyle(color: Colors.black),
             ),
             received: true,
@@ -78,9 +79,9 @@ class _ChatScreenState extends State<ChatScreen> {
           ),
           widget.isClosed
               ? const ChatMessage(
-                  id: 'chat-message',
+                  id:Constants.chatId,
                   content: Text(
-                    'Task`s has been completed and project has been closed.',
+                    Constants.completedChat,
                     style: TextStyle(color: Colors.white, fontSize: 12),
                   ),
                   received: false,
@@ -88,9 +89,9 @@ class _ChatScreenState extends State<ChatScreen> {
                 )
               : widget.isShipped
                   ? const ChatMessage(
-                      id: 'chat-message',
+                      id:Constants.chatId,
                       content: Text(
-                        'I`ve just shipped the project.',
+                        Constants.inProgressChat,
                         style: TextStyle(color: Colors.white),
                       ),
                       received: false,
@@ -98,9 +99,9 @@ class _ChatScreenState extends State<ChatScreen> {
                     )
                   : widget.isReview
                       ? const ChatMessage(
-                          id: 'chat-message',
+                          id:Constants.chatId,
                           content: Text(
-                            'I`ve just reviewed the project.',
+                            Constants.inReviewChat,
                             style: TextStyle(color: Colors.white),
                           ),
                           received: false,
@@ -108,18 +109,18 @@ class _ChatScreenState extends State<ChatScreen> {
                         )
                       : const SizedBox(),
           const ChatMessage(
-            id: 'chat-message',
+            id:Constants.chatId,
             content: Text(
-              'Great! Keep it up!',
+              Constants.goodChat,
               style: TextStyle(color: Colors.black),
             ),
             received: true,
             chatBubbleColor: Colors.white,
           ),
           const ChatMessage(
-            id: 'chat-message',
+            id:Constants.chatId,
             content: Text(
-              'Thanks!',
+              Constants.thanksChat,
               style: TextStyle(color: Colors.white),
             ),
             received: false,
@@ -127,9 +128,9 @@ class _ChatScreenState extends State<ChatScreen> {
           ),
           widget.isClosed
               ? const ChatMessage(
-                  id: 'chat-message',
+                  id:Constants.chatId,
                   content: Text(
-                    'Welcome mann!',
+                    Constants.welcomeChat,
                     style: TextStyle(color: Colors.black),
                   ),
                   received: true,
@@ -139,7 +140,7 @@ class _ChatScreenState extends State<ChatScreen> {
           const SizedBox(height: 20),
           isWritten
               ? ChatMessage(
-                  id: 'chat-message',
+                  id:Constants.chatId,
                   content: Text(
                     _message,
                     style: TextStyle(color: Colors.white),
@@ -159,7 +160,7 @@ class _ChatScreenState extends State<ChatScreen> {
                     child: TextFormField(
                       controller: _messageController,
                       decoration: InputDecoration(
-                        hintText: 'Type a message',
+                        hintText: Constants.typeMessage,
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(30),
                         ),
@@ -171,8 +172,6 @@ class _ChatScreenState extends State<ChatScreen> {
                         setState(() {
                           _message = value!;
                         });
-                        print(_message);
-                        // _sendMessage();
                       },
                     ),
                   ),

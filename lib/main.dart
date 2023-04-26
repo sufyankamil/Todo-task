@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:task_screens/screens/SplashScreen.dart';
 import 'package:task_screens/screens/TaskDetails.dart';
 import 'package:task_screens/screens/walkthrough/WalkThrough.dart';
 
